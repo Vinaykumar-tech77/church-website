@@ -1,0 +1,619 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= GLOBAL ================= */
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background: #ffffff;
+  color: #222;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Sections */
+.section {
+  padding: 35px 0;
+}
+
+.section.light {
+  background: #f8fafc;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  font-weight: 600;
+  color: #1e3a8a;
+}
+.section-title1 {
+  text-align: center;
+  margin-bottom: 10px;
+  padding-top: 0% !important;
+  font-weight: 600; 
+  color: #1e3a8a;
+}
+
+.section-text {
+  text-align: center;
+  max-width: 1000px;
+  margin: auto;
+  color: black;
+}
+
+/* ================= HEADER ================= */
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: #0f172a;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.logo {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+/* Menu */
+#nav-menu ul {
+  display: flex;
+  list-style: none;
+}
+
+#nav-menu ul li {
+  margin-left: 20px;
+}
+
+#nav-menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+#nav-menu ul li a:hover {
+  color: #60a5fa;
+}
+
+/* Right section */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#language-toggle {
+  background: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Mobile Menu */
+#menu-toggle {
+  display: none;
+  font-size: 1.3rem;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+
+/* Button */
+.btn {
+  background: #2563eb;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #1d4ed8;
+}
+ 
+/* ================= HERO SLIDER ================= */
+.hero {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.hero-slider img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.hero-slider img.active {
+  opacity: 1;
+}
+
+/* Overlay for readability */
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  top: 0;
+  left: 0;
+}
+
+/* Keep text above */
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* ================= CARDS ================= */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #1e3a8a;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+
+
+
+/* ================= FOOTER ================= */
+.footer {
+  background: #0f172a;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.footer h3 {
+  margin-bottom: 5px;
+}
+
+/* Icons */
+.socials {
+  margin-bottom: 15px;
+}
+
+.socials a {
+  margin: 0 10px;
+  font-size: 1.4rem;
+  color: white;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.socials a:hover {
+  color: #60a5fa;
+  transform: scale(1.2);
+}
+
+/* Paragraph */
+.footer-text {
+  max-width: 600px;
+  margin: 10px auto;
+  font-size: 0.9rem;
+  color: #cbd5f5;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.mobile-break {
+  display: none;
+}
+#menu-close {
+  display: none;
+}
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+ #menu-close {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+  }
+  #nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background: #0f172a;
+    transition: 0.3s;
+  }
+
+  #nav-menu ul {
+    flex-direction: column;
+    padding: 60px 20px;
+  }
+
+  #nav-menu ul li {
+    margin: 15px 0;
+  }
+
+  #menu-toggle {
+    display: block;
+  }
+
+  #nav-menu.active {
+    right: 0;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .contact-box {
+    grid-template-columns: 1fr;
+  }
+   .faq-container {
+    grid-template-columns: 1fr !important;
+  }
+  .connect-grid {
+    grid-template-columns: 1fr !important; 
+  }
+
+  /* Hero heading */
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  /* Section titles */
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  /* General h2 */
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  /* Card titles */
+  .card h3 {
+    font-size: 1.1rem;
+  }
+
+  /* Paragraphs */
+  p {
+    font-size: 0.9rem;
+  }
+    .mobile-break {
+    display: inline;
+  }
+  .hero h1 {
+  font-size: 22px;
+}
+
+  .hero {
+    background: #000; /* fallback */
+  }
+
+  .hero-slider img {
+    object-fit: cover;  /* back to cover */
+    object-position: center;
+  }
+
+}
+
+.section, .card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
+}
+
+.section.show, .card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================= GALLERY ================= */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+/* ================= CARD IMAGE ================= */
+.card-img {
+  width: 80%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px; 
+  margin-bottom: 10px;
+}
+.card-img {
+  transition: transform 0.4s ease;
+}
+
+.card:hover .card-img {
+  transform: scale(1.05);
+}
+
+
+/* ================= PREACHER ================= */
+.center {
+  text-align: center;
+}
+
+.preacher-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 300px;
+  margin: 20px auto; 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.preacher-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Image */
+.preacher-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 70%;
+  margin-bottom: 15px;
+}
+
+/* Name */
+.preacher-card h3 {
+  color: #1e3a8a;
+}
+
+/* Phone link */
+.preacher-card a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+/* ================= FAQ ================= */
+.faq-container {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.faq-item {
+  background: #fff;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.faq-item.active {
+  background: #eef2ff;
+}
+
+/* Question */
+.faq-question {
+  padding: 15px;
+  font-weight: 600;
+  color: #1e3a8a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Icon */
+.faq-icon {
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+/* Answer animation */
+.faq-answer {
+  max-height: 0;
+  font-size: 0.9rem;
+  overflow: hidden;
+  padding: 0 10px;
+  color: #555;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+/* Active state */
+.faq-item.active .faq-answer {
+  max-height: 1000px;
+  padding: 5px 5px 0px;
+}
+
+/* Rotate icon */
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+}
+
+
+
+
+
+/* ================= CONNECT ================= */
+.connect-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.connect-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.connect-box iframe {
+  border-radius: 10px;
+}
+
+/* Form */
+.connect-box form {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.connect-box input,
+.connect-box textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.connect-box .section-title {
+  margin-bottom: 5px;   /* reduce gap */
+}
+/* Mobile */
+
+
+
+/* ================= ELDERS ================= */
+.elders-card {
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.elders-img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+/* Hover effect */
+.elders-img:hover {
+  transform: scale(1.02);
+}
+.connect-text {
+  font-size: 0.9rem;
+  color: black;
+  margin-top: 0;        /* 🔵 nice blue accent */
+  margin-bottom: 12px;
+  font-weight: 500;
+  text-align: center;
+}

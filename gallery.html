@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gallery - Church of Christ Anandapuram</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+  <div class="container nav">
+
+    <div class="logo">CHURCH OF CHRIST</div>
+
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#services">Worship</a></li>
+        <li><a href="index.html#programs">Programs</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-right">
+      <div id="menu-toggle"><i class="fas fa-bars"></i></div>
+    </div>
+
+  </div>
+</header>
+
+<!-- ================= PAGE TITLE ================= -->
+<section class="section">
+  <div class="container center">
+    <h2 class="section-title">Our Gallery</h2>
+    <p>Moments from our worship, fellowship and activities</p>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section class="section light">
+  <div class="container">
+
+    <div class="gallery-grid">
+
+      <img src="first.jpeg" alt="Church Event">
+      <img src="cimage22.jpeg" alt="Worship">
+      <img src="main3.jpg" alt="Sunday Worship">
+      <img src="ss2.jpg" alt="Sunday School">
+      <img src="sports.JPG" alt="Sports Event">
+      <img src="sundayschool.jpeg" alt="Kids Activity">
+      <img src="cimage3.jpeg" alt="Elders">
+      <img src="preachers.jpg" alt="Preachers">
+      <img src="church.png" alt="Church Building">
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= LIGHTBOX ================= -->
+<div class="lightbox" id="lightbox">
+  <span class="close">&times;</span>
+  <img id="lightbox-img">
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container">
+    <h3>Church of Christ Anandapuram</h3>
+
+    <div class="socials">
+      <a href="tel:+918951271344"><i class="fas fa-phone"></i></a>
+      <a href="https://wa.me/+918951271344"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://maps.app.goo.gl/ttew591Z3qqTK2h98"><i class="fas fa-map-marker-alt"></i></a>
+    </div>
+
+    <p>© 2026 All Rights Reserved</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+<!-- ================= GALLERY SCRIPT ================= -->
+<script>
+
+// Lightbox functionality
+const images = document.querySelectorAll(".gallery-grid img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const closeBtn = document.querySelector(".close");
+
+images.forEach(img => {
+  img.addEventListener("click", () => {
+    lightbox.style.display = "flex";
+    lightboxImg.src = img.src;
+  });
+});
+
+closeBtn.addEventListener("click", () => {
+  lightbox.style.display = "none";
+});
+
+lightbox.addEventListener("click", (e) => {
+  if (e.target !== lightboxImg) {
+    lightbox.style.display = "none";
+  }
+});
+
+</script>
+
+</body>
+</html>
