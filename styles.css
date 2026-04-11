@@ -324,9 +324,6 @@ body {
   .contact-box {
     grid-template-columns: 1fr;
   }
-   .faq-container {
-    grid-template-columns: 1fr !important;
-  }
   .connect-grid {
     grid-template-columns: 1fr !important; 
   }
@@ -491,11 +488,11 @@ body {
 
 /* ================= FAQ ================= */
 .faq-container {
-  max-width: 1000px;
+  max-width: 800px;
   margin: auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .faq-item {
@@ -616,4 +613,51 @@ body {
   margin-bottom: 12px;
   font-weight: 500;
   text-align: center;
+}
+
+/* ================= CONTACT DESIGN ================= */
+.contact-box {
+  text-align: left;
+}
+
+/* Contact items */
+.contact-info {
+  margin-top: 15px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+/* Icons */
+.contact-item i {
+  color: #1e3a8a;
+  font-size: 0.95rem;
+  margin-top: 3px;
+}
+
+/* Text */
+.contact-item span {
+  line-height: 1.5;
+}
+
+/* Hover effect */
+.contact-item:hover {
+  transform: translateX(5px);
+  transition: 0.3s;
+}
+.contact-link {
+  color: black;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+  color: #1e40af;
 }
