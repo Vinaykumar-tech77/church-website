@@ -164,9 +164,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  languageToggle?.addEventListener('click', () => {
-    const target = languageToggle.getAttribute('data-target');
-    if (target) window.location.href = target;
+  languageToggle?.addEventListener('click', (event) => {
+    const target = languageToggle.getAttribute('data-target') || languageToggle.getAttribute('href');
+    if (!target) return;
+
+    if (languageToggle.tagName !== 'A') {
+      event.preventDefault();
+      window.location.href = target;
+    }
   });
 
   const scrollBtn = qs('#scrollTopBtn') || (() => {
