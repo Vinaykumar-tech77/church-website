@@ -705,11 +705,41 @@ div[id] {
 .grid-two,
 .connect-grid,
 .leadership-grid,
-.about-grid {
+#about {
+  padding: 60px 20px;
+}
+
+#about .section-heading {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+}
+
+#about .section-description {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 750px;
+  margin: 0 auto;
+  color: var(--text-soft); /* IMPORTANT FIX */
+}
+
+#about .about-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 6px;
+}
+
+#about .feature-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 32px;
-  align-items: start;
+  gap: 24px;
 }
 
 .feature-grid {
@@ -1470,9 +1500,7 @@ div[id] {
 .scroll-top-btn.is-visible {
   display: grid;
 }
-
 .reveal,
-.section,
 .card,
 .feature-card,
 .program-card,
