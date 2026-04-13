@@ -1,0 +1,16 @@
+{
+  "name": "Church of Christ Anandapuram",
+  "short_name": "COC Anandapuram",
+  "description": "Worship, fellowship and faith in Bengaluru since 1969.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#07101f",
+  "theme_color": "#07101f",
+  "icons": [
+    {
+      "src": "./favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
