@@ -731,6 +731,15 @@ div[id] {
   display: grid;
   gap: 20px;
 }
+.visit-banner .section-kicker {
+  justify-content: flex-start;
+  margin-left: 0;
+  margin-right: 0;
+
+  display: inline-flex;
+  width: fit-content;
+  max-width: 100%;
+}
 
 .metrics-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
