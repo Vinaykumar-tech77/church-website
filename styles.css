@@ -1846,7 +1846,12 @@ div[id] {
   .schedule-actions {
     gap: 10px;
   }
-
+  .hero-grid {
+    margin-top: 60px;
+  }
+  .hero-panel {
+    margin-top: 50px;
+  }
   .hero-card,
   .metric-card,
   .feature-card,
