@@ -427,7 +427,7 @@ div[id] {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(115deg, rgba(4, 8, 20, 0.92) 10%, rgba(7, 16, 31, 0.72) 46%, rgba(37, 99, 235, 0.25) 100%),
+    linear-gradient(115deg, rgba(4, 8, 20, 0.96) 10%, rgba(7, 16, 31, 0.82) 46%, rgba(37, 99, 235, 0.45) 100%),
     radial-gradient(circle at 80% 10%, rgba(199, 155, 74, 0.18), transparent 28%);
   z-index: 1;
 }
