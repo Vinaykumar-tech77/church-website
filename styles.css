@@ -686,11 +686,13 @@ div[id] {
   text-align: center;
 }
 
-#contact .section-kicker {
-  margin-left: auto;
-  margin-right: auto;
-}
 
+#contact .section-kicker {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 18px;
+}
 #contact .contact-copy {
   max-width: 720px;
   margin: 0 auto 10px;
