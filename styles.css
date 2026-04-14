@@ -549,8 +549,8 @@ div[id] {
 }
 
 .hero-card {
-  background: rgba(255, 255, 255, 0.95);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(247, 243, 243, 0.3);
   box-shadow: var(--shadow-lg);
   border-radius: var(--radius-lg);
   padding: 28px;
@@ -558,40 +558,39 @@ div[id] {
   display: grid;
   gap: 18px;
   margin-bottom: 32px;
+  color: #ffffff;
+
 }
 
 .hero-card h2 {
-  font-size: 1.5rem;
-  color: var(--text);
-  margin-bottom: 0;
+  color: #ffffff;
 }
 
 .hero-card > p {
-  color: var(--text-soft);
-  margin-bottom: 0;
-  line-height: 1.76;
+  color: rgba(255,255,255,0.75);
 }
 
-.hero-card-row {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 16px 0;
-  border-top: 1px solid var(--line);
+.hero-card-row span {
+  color: rgba(255,255,255,0.7);
+}
+
+.hero-card-row strong {
+  color: #ffffff;
 }
 
 .hero-card-row:first-of-type {
+  color: #ffffff;
+
   border-top: 0;
   padding-top: 0;
 }
 
 .hero-card-row span {
-  color: var(--text-soft);
+  color: #ffffff;
 }
 
 .hero-card-row strong {
-  color: var(--text);
+  color: #ffffff;
   text-align: right;
 }
 
@@ -608,7 +607,15 @@ div[id] {
   display: inline-flex;
   gap: 10px;
 }
+.hero-card .btn-ghost {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255,255,255,0.4);
+}
 
+.hero-card .btn-ghost:hover {
+  background: rgba(255,255,255,0.15);
+}
 .hero-dot {
   width: 12px;
   height: 12px;
