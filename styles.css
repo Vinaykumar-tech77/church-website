@@ -417,7 +417,8 @@ div[id] {
   display: flex;
   align-items: center;
   overflow: clip;
-  padding-top: 52px;
+  padding-top: 100px;
+
   background: #081121;
 }
 
@@ -469,7 +470,7 @@ div[id] {
   display: grid;
   grid-template-columns: minmax(0, 1.3fr) minmax(320px, 420px);
   gap: 42px;
-  align-items: center;
+  align-items: start;
 }
 
 .hero-content {
