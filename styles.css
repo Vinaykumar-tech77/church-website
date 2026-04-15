@@ -1666,16 +1666,7 @@ div[id] {
   display: grid;
 }
 
-.reveal,
-.section,
-.card,
-.feature-card,
-.program-card,
-.metric-card,
-.summary-card,
-.leader-card,
-.contact-panel,
-.elders-showcase {
+.reveal {
   opacity: 0;
   transform: translateY(28px);
   transition: opacity 620ms ease, transform 620ms ease;
@@ -1822,52 +1813,19 @@ html, body {
     right: 24px;
   }
 }
-@media (max-width: 390px) {
-  .brand-copy strong {
-    font-size: 0.76rem;
-  }
-
-  #language-toggle {
-    padding: 7px 9px;
-    font-size: 0.76rem;
-  }
-}
 @media (max-width: 720px) {
-.nav {
-  gap: 10px;
-}
-
-.brand {
-  flex: 1 1 auto;
-  min-width: 0;
-}
-
-.brand-copy {
-  min-width: 0;
-}
-
-.brand-copy strong {
-  font-size: 0.82rem;
-  line-height: 1.15;
-}
-
-.nav-right {
-  flex: 0 0 auto;
-  gap: 8px;
-  margin-left: auto;
-}
-
-#language-toggle {
-  min-width: auto;
-  padding: 8px 10px;
-  font-size: 0.8rem;
-}
-  .section {
-    padding: 72px 0;
+  .nav {
+    gap: 10px;
   }
 
-  .container {
-    width: min(calc(100% - 24px), var(--container));
+  .brand {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .brand-copy {
+    min-width: 0;
+    overflow: hidden;
   }
 
   .brand-copy small {
@@ -1875,7 +1833,37 @@ html, body {
   }
 
   .brand-copy strong {
-    font-size: 0.92rem;
+    display: block;
+    font-size: 0.82rem;
+    line-height: 1.15;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .nav-right {
+    flex: 0 0 auto;
+    gap: 8px;
+    margin-left: auto;
+  }
+
+  #language-toggle {
+    min-width: auto;
+    padding: 8px 10px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+
+  #menu-toggle {
+    flex: 0 0 auto;
+  }
+
+  .section {
+    padding: 72px 0;
+  }
+
+  .container {
+    width: min(calc(100% - 24px), var(--container));
   }
 
   .hero {
@@ -1904,12 +1892,15 @@ html, body {
   .schedule-actions {
     gap: 10px;
   }
+
   .hero-grid {
     margin-top: 60px;
   }
+
   .hero-panel {
     margin-top: 50px;
   }
+
   .hero-card,
   .metric-card,
   .feature-card,
@@ -1966,6 +1957,17 @@ html, body {
   .footer-bottom {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 390px) {
+  .brand-copy strong {
+    font-size: 0.74rem;
+  }
+
+  #language-toggle {
+    padding: 7px 8px;
+    font-size: 0.74rem;
   }
 }
 
