@@ -1815,7 +1815,16 @@ html, body {
     right: 24px;
   }
 }
+@media (max-width: 390px) {
+  .brand-copy strong {
+    font-size: 0.76rem;
+  }
 
+  #language-toggle {
+    padding: 7px 9px;
+    font-size: 0.76rem;
+  }
+}
 @media (max-width: 720px) {
 .nav {
   gap: 10px;
