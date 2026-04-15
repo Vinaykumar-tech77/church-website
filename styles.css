@@ -967,10 +967,18 @@ div[id] {
 }
 
 .card-img,
-.gallery-card img,
 .elders-img {
   width: 100%;
   aspect-ratio: 16 / 10;
+  object-fit: cover;
+  transition: transform 420ms ease;
+}
+
+.gallery-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
   object-fit: cover;
   transition: transform 420ms ease;
 }
@@ -1422,8 +1430,7 @@ div[id] {
 }
 
 .gallery-card img {
-  width: 100%;
-  height: 100%;
+  display: block;
 }
 
 .gallery-card-body {
