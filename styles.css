@@ -1668,11 +1668,15 @@ div[id] {
 .summary-card,
 .leader-card,
 .contact-panel,
-.elders-showcase,
-.gallery-item {
+.elders-showcase {
   opacity: 0;
   transform: translateY(28px);
   transition: opacity 620ms ease, transform 620ms ease;
+}
+
+.gallery-item {
+  opacity: 1;
+  transform: none;
 }
 
 .show {

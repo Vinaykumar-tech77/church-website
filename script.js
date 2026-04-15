@@ -229,7 +229,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  const revealElements = qsa('.reveal, .section, .card, .feature-card, .program-card, .metric-card, .summary-card, .leader-card, .contact-panel, .elders-showcase, .gallery-item');
+  const revealElements = qsa('.reveal, .section, .card, .feature-card, .program-card, .metric-card, .summary-card, .leader-card, .contact-panel, .elders-showcase');
   if ('IntersectionObserver' in window && !reduceMotion) {
     const revealObserver = new IntersectionObserver(
       (entries, observer) => {
