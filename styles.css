@@ -2158,3 +2158,97 @@ html, body {
     border-radius: 16px;
   }
 }
+/* ===== Header brand: no icon + 2-line church name ===== */
+.brand-mark {
+  display: none !important;
+}
+
+.brand {
+  gap: 0 !important;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.brand-copy {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.brand-copy strong.brand-title {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+  font-size: 1rem;
+  line-height: 1.12;
+  letter-spacing: 0.02em;
+}
+
+.brand-title-line {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.brand-copy small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 720px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .brand {
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .brand-copy {
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .brand-copy strong.brand-title {
+    font-size: 0.82rem;
+    line-height: 1.06;
+  }
+
+  .brand-copy small {
+    display: none;
+  }
+
+  .nav-right {
+    flex: 0 0 auto;
+    margin-left: auto;
+    gap: 8px;
+  }
+
+  #language-toggle {
+    min-width: auto;
+    padding: 8px 10px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+
+  #menu-toggle {
+    flex: 0 0 auto;
+  }
+}
+
+@media (max-width: 390px) {
+  .brand-copy strong.brand-title {
+    font-size: 0.74rem;
+    line-height: 1.04;
+  }
+
+  #language-toggle {
+    padding: 7px 8px;
+    font-size: 0.74rem;
+  }
+}
