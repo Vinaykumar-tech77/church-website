@@ -1683,7 +1683,9 @@ div[id] {
 .is-placeholder {
   filter: saturate(0.95) contrast(1.02);
 }
-
+html, body {
+  overflow-x: hidden;
+}
 @media (max-width: 1160px) {
   .hero-grid,
   .page-banner-grid,
@@ -1726,22 +1728,22 @@ div[id] {
   }
 
   #nav-menu {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: min(380px, calc(100% - 28px));
-    height: 100svh;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: flex-start;
-    gap: 24px;
-    padding: 22px 20px 28px;
-    background: linear-gradient(180deg, rgba(7, 16, 31, 0.98), rgba(11, 24, 48, 0.98));
-    box-shadow: -20px 0 50px rgba(2, 6, 23, 0.38);
-    transition: right var(--transition);
-    z-index: 1100;
-    margin-left: 0;
-  }
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;              
+  max-width: 380px;         
+  height: 100vh;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 24px;
+  padding: 22px 20px 28px;
+  background: linear-gradient(180deg, rgba(7, 16, 31, 0.98), rgba(11, 24, 48, 0.98));
+  box-shadow: -20px 0 50px rgba(2, 6, 23, 0.38);
+  transition: right 0.3s ease;
+  z-index: 1100;
+}
 
   #nav-menu.active {
     right: 0;
