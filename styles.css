@@ -1817,6 +1817,35 @@ html, body {
 }
 
 @media (max-width: 720px) {
+.nav {
+  gap: 10px;
+}
+
+.brand {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.brand-copy {
+  min-width: 0;
+}
+
+.brand-copy strong {
+  font-size: 0.82rem;
+  line-height: 1.15;
+}
+
+.nav-right {
+  flex: 0 0 auto;
+  gap: 8px;
+  margin-left: auto;
+}
+
+#language-toggle {
+  min-width: auto;
+  padding: 8px 10px;
+  font-size: 0.8rem;
+}
   .section {
     padding: 72px 0;
   }
