@@ -2252,3 +2252,112 @@ html, body {
     font-size: 0.74rem;
   }
 }
+
+/* ===== FINAL HEADER FIX ===== */
+.header .nav {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: nowrap !important;
+  gap: 10px !important;
+}
+
+.header .brand-mark {
+  display: none !important;
+}
+
+.header .brand {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0 !important;
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  text-decoration: none !important;
+  color: #ffffff !important;
+}
+
+.header .brand-copy {
+  display: flex !important;
+  flex-direction: column !important;
+  min-width: 0 !important;
+  overflow: hidden !important;
+}
+
+.header .brand-copy .brand-title {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0 !important;
+  min-width: 0 !important;
+  font-size: 1rem !important;
+  line-height: 1.08 !important;
+  letter-spacing: 0.01em !important;
+}
+
+.header .brand-copy .brand-title-line {
+  display: block !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+.header .brand-copy small {
+  margin-top: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.header .nav-right {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  flex: 0 0 auto !important;
+  margin-left: auto !important;
+}
+
+@media (max-width: 920px) {
+  .header .brand {
+    max-width: calc(100% - 150px) !important;
+  }
+
+  .header .brand-copy .brand-title {
+    font-size: 0.86rem !important;
+    line-height: 1.05 !important;
+  }
+
+  .header .brand-copy small {
+    display: none !important;
+  }
+
+  .header #language-toggle {
+    min-width: 0 !important;
+    padding: 8px 10px !important;
+    font-size: 0.8rem !important;
+    white-space: nowrap !important;
+  }
+
+  .header #menu-toggle {
+    width: 44px !important;
+    height: 44px !important;
+    flex: 0 0 44px !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .header .brand {
+    max-width: calc(100% - 136px) !important;
+  }
+
+  .header .brand-copy .brand-title {
+    font-size: 0.74rem !important;
+    line-height: 1.02 !important;
+  }
+
+  .header #language-toggle {
+    padding: 7px 8px !important;
+    font-size: 0.74rem !important;
+  }
+}
